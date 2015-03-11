@@ -1,0 +1,6 @@
+---
+# handlers file for mapr_hbasemaster
+
+- name: configure.sh -R
+  command: /opt/mapr/server/configure.sh -R
+

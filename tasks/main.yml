@@ -1,0 +1,6 @@
+---
+# tasks file for mapr_hbasemaster
+
+- name: install mapr-hbase-master
+  yum: name=mapr-hbase-master state=present
+  notify: configure.sh -R
