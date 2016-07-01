@@ -2,8 +2,8 @@
 # tasks file for mapr_hbasemaster
 
 - name: install mapr-hbase-master
-  sudo: yes
-  sudo_user: root
+  become: yes
+  become_user: root
   yum: name=mapr-hbase-master-{{hbase_version}}.{{hbase_build}} state=present
   environment: proxy_env
   when: inventory_hostname in groups["hbasemaster"]
